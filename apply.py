@@ -191,14 +191,15 @@ class App:
 
     def _make_legend(self, parent):
         ttk.Label(parent, text="Legend:").pack(side=tk.LEFT)
-        canvas = tk.Canvas(parent, width=220, height=28, bg="white", highlightthickness=0)
+        # widen the legend canvas to fit all boxes
+        canvas = tk.Canvas(parent, width=340, height=28, bg="white", highlightthickness=0)
         canvas.pack(side=tk.LEFT)
         x = 5
         def box(color, label):
             nonlocal x
-            canvas.create_rectangle(x,4,x+12,16, fill=color, outline="black")
-            canvas.create_text(x+20,10, anchor=tk.W, text=label, font=("TkDefaultFont", 8))
-            x += 80
+            canvas.create_rectangle(x, 4, x + 12, 16, fill=color, outline="black")
+            canvas.create_text(x + 18, 10, anchor=tk.W, text=label, font=("TkDefaultFont", 8))
+            x += 80  # reduce spacing slightly to fit better
         box(COLOR_PATH, "Final Path")
         box(COLOR_CLOSED, "Closed")
         box(COLOR_NONACCESS, "Non-access")
