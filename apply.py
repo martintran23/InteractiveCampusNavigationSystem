@@ -1,6 +1,6 @@
 # Student Name: Martin Tran
 # Titan Email: 23martintran@csu.fullerton.edu=
-# Project: CPSC 335 – Interactive Campus Navigation System
+# Project: CPSC 335 - Interactive Campus Navigation System
 # Date: 2025-10-14
 
 """
