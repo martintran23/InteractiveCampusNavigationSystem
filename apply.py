@@ -18,7 +18,6 @@ Features:
     Orange -> Non-accessible path
     Black  -> Open regular path
 - Robust error handling for duplicate names, invalid selections, no path found, etc.
-- Single file: apply.py
 """
 
 import tkinter as tk
@@ -192,7 +191,7 @@ class App:
 
     def _make_legend(self, parent):
         ttk.Label(parent, text="Legend:").pack(side=tk.LEFT)
-        canvas = tk.Canvas(parent, width=220, height=28, bg=parent.cget("background"), highlightthickness=0)
+        canvas = tk.Canvas(parent, width=220, height=28, bg="white", highlightthickness=0)
         canvas.pack(side=tk.LEFT)
         x = 5
         def box(color, label):
